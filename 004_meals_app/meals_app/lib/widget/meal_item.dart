@@ -4,21 +4,21 @@ import 'package:meals_app/widget/meal_item_trait.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class MealItem extends StatelessWidget {
-  const MealItem({
-    super.key,
-    required this.meal,
-  });
+  const MealItem({super.key, required this.meal, required this.onSelectMeal});
 
   final Meal meal;
+  final void Function() onSelectMeal;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-        margin: EdgeInsets.all(8),
+        margin: const EdgeInsets.all(8),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         clipBehavior: Clip.hardEdge,
         child: InkWell(
-            onTap: () {},
+            onTap: () {
+              onSelectMeal();
+            },
             child: Stack(
               children: [
                 FadeInImage(
