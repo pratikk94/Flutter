@@ -67,7 +67,7 @@ class _ExpensesState extends State<Expenses> {
   Widget build(BuildContext context) {
     Widget mainContent = const Center(child: Text("No expense logged"));
 
-    if (!registeredExpenses.isEmpty) {
+    if (registeredExpenses.isNotEmpty) {
       mainContent = ExpensesList(
           expenses: registeredExpenses, removeExpense: _removeExpense);
     }

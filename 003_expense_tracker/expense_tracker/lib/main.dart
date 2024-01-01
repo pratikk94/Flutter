@@ -21,11 +21,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       darkTheme: ThemeData().copyWith(
-        useMaterial3: true,
+        // useMaterial3: true,
         colorScheme: edColorScheme,
       ),
       theme: ThemeData().copyWith(
-        useMaterial3: true,
+        // useMaterial3: true,
         colorScheme: eColorScheme,
         appBarTheme: const AppBarTheme().copyWith(
           backgroundColor: eColorScheme.onPrimaryContainer,
